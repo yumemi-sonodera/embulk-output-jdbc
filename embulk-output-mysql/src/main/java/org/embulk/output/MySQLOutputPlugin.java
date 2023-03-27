@@ -75,7 +75,7 @@ public class MySQLOutputPlugin
     {
         MySQLPluginTask t = (MySQLPluginTask) task;
 
-        loadDriver("com.mysql.jdbc.Driver", t.getDriverPath());
+        loadDriver("com.mysql.cj.jdbc.Driver", t.getDriverPath());
 
         String url = String.format("jdbc:mysql://%s:%d/%s",
                 t.getHost(), t.getPort(), t.getDatabase());
